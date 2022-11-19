@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.39, created on 2022-11-17 18:42:53
+/* Smarty version 3.1.39, created on 2022-11-19 18:27:07
   from 'module:psfeaturedproductsviewste' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_6376729d53c5c6_47621051',
+  'unifunc' => 'content_637911eb90e571_05966965',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -42,7 +42,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   ),
   'cache_lifetime' => 31536000,
 ),true)) {
-function content_6376729d53c5c6_47621051 (Smarty_Internal_Template $_smarty_tpl) {
+function content_637911eb90e571_05966965 (Smarty_Internal_Template $_smarty_tpl) {
 ?><section class="featured-products clearfix">
   <h2 class="h2 products-section-title text-uppercase">
     Popularne produkty
@@ -156,15 +156,15 @@ function content_6376729d53c5c6_47621051 (Smarty_Internal_Template $_smarty_tpl)
                       <div class="product-price-and-shipping">
                               
 
-                <span class="regular-price" aria-label="Cena podstawowa">44,16 zł</span>
-                                  <span class="discount-percentage discount-product">-20%</span>
+                <span class="regular-price" aria-label="Cena podstawowa">49,20 zł</span>
+                                  <span class="discount-percentage discount-product">-10%</span>
                               
               
 
-              <span class="price" aria-label="Cena">35,33 zł</span>
+              <span class="price" aria-label="Cena">44,28 zł</span>
               <div itemprop="offers" itemscope itemtype="http://schema.org/Offer" class="invisible">
                 <meta itemprop="priceCurrency" content="PLN" />
-                <meta itemprop="price" content="35.33" />
+                <meta itemprop="price" content="44.28" />
               </div>
 
               
@@ -186,7 +186,7 @@ function content_6376729d53c5c6_47621051 (Smarty_Internal_Template $_smarty_tpl)
 
       
     <ul class="product-flags">
-                    <li class="product-flag discount">-20%</li>
+                    <li class="product-flag discount">-10%</li>
                     <li class="product-flag new">Nowy</li>
             </ul>
 
