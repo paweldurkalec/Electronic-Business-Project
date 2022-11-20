@@ -2,3 +2,19 @@
  * Custom code goes here.
  * A template should always ship with an empty custom.css
  */
+ 
+ section#wrapper {background: linear-gradient(SeaGreen, Olive, SeaGreen);}
+ 
+ nav.header-nav{
+ 	background: Green;
+ }
+ 
+ nav .row .blockcart{
+ 	background: Violet !important;
+ }
+ 
+ nav .row
+ {
+ 	background: Yellow;
+ }
+ 
