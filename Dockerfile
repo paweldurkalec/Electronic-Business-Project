@@ -1,11 +1,12 @@
 FROM prestashop/prestashop:1.7.7.8
 
-RUN rm -rf *
+COPY ssl/ /etc/apache2/sites-available
 
-COPY webshop/ ./
-
-RUN chown -R www-data:root ./
-
+RUN a2enmod ssl
+RUN a2enconf ssl-params
+RUN a2ensite default-ssl
 RUN service apache2 restart
 
 EXPOSE 80
+EXPOSE 443
+

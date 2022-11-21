@@ -3,18 +3,44 @@
  * A template should always ship with an empty custom.css
  */
  
- section#wrapper {background: linear-gradient(SeaGreen, Olive, SeaGreen);}
+ section#wrapper {background: linear-gradient(palegreen, darkseagreen, palegreen);}
  
  nav.header-nav{
- 	background: Green;
+ 	background: #81c784;
  }
  
  nav .row .blockcart{
- 	background: Violet !important;
+ 	background: LightGreen !important;
+ }
+ 
+ #header
+ {
+ 	background: springgreen;
+ }
+ 
+.header-top
+ {
+ 	background: springgreen;;
  }
  
  nav .row
  {
- 	background: Yellow;
+ 	background: #81c784;
  }
+ 
+ #footer
+ {
+ 	background: #81c784;
+ }
+ 
+ .category-cover
+ {
+ 	vertical-align: middle;
+ }
+ 
+ .block-category
+ {
+ 	min-height: 5rem;
+ }
+
  

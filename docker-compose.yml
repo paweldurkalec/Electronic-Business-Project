@@ -20,12 +20,15 @@ services:
 
             
     prestashop:
-        image: prestashop/prestashop:1.7
         container_name: prestashop
         environment:
             DB_SERVER: mariadb
+            PS_DOMAIN: localhost:8080
+            PS_DOMAIN_SSL: localhost:8081
         ports:
             - 8080:80
+            - 8081:443
+        build: .
         networks:
             - prestashop
         volumes:
