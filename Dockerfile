@@ -1,6 +1,5 @@
 FROM prestashop/prestashop:1.7.7.8
 
-RUN chown -R www-data:root ./
 
 COPY ssl/ /etc/apache2/sites-available
 
