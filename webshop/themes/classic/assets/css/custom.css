@@ -9,6 +9,10 @@
  	background: #81c784;
  }
  
+ body{
+ 	background: red;
+ }
+ 
  nav .row .blockcart{
  	background: LightGreen !important;
  }
