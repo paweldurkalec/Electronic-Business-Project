@@ -3,7 +3,7 @@ import time
 
 from selenium.webdriver.common.by import By
 
-PATH = "/home/pawer/Python/Tester/chromedriver"
+PATH = "./chromedriver"
 options = webdriver.ChromeOptions()
 options.add_argument('--ignore-ssl-errors=yes')
 options.add_argument('--ignore-certificate-errors')
@@ -11,7 +11,7 @@ driver = webdriver.Chrome(PATH, options=options)
 
 NAME = 'Jan'
 SURNAME = 'Kowalski'
-EMAIL = 'jan@kowalski.pl'
+EMAIL = 'pdurkalec1006@gmail.com'
 PASSWORD = 'examplarypassword'
 BIRTDATE = '1970-05-31'
 ADDRES = "Politechniczna 0"
@@ -19,15 +19,14 @@ POST_CODE = '80-288'
 CITY = 'Gdansk'
 
 MODE='SLEEP'
-SLEEP_TIME = 0.8
+SLEEP_TIME = 1.2
 
 def custom_sleep():
     if MODE == 'SLEEP':
         time.sleep(SLEEP_TIME)
 
 def login():
-    driver.find_element(By.XPATH,'/html/body/main/header/nav/div/div/div[1]/div[2]'
-                                 '/div[2]/div/a/span').click()
+    driver.find_element(By.XPATH,'/html/body/main/header/nav/div/div/div[1]/div[2]/div[2]/div/a').click()
     driver.find_element(By.XPATH,
                         '/html/body/main/section/div/div/section/section/section'
                         '/form/section/div[1]/div[1]/input').send_keys(EMAIL)
@@ -41,7 +40,7 @@ def login():
 def register():
 
     #going to register from
-    driver.find_element(By.XPATH, '/html/body/main/header/nav/div/div/div[1]/div[2]/div[2]/div/a/i').click()
+    driver.find_element(By.XPATH, '/html/body/main/header/nav/div/div/div[1]/div[2]/div[2]/div/a').click()
     time.sleep(1)
     driver.find_element(By.XPATH, '/html/body/main/section/div/div/section/section/div/a').click()
     time.sleep(1)
@@ -70,11 +69,9 @@ def register():
     password_textbox.send_keys(PASSWORD)
     custom_sleep()
     birthdate_textbox.send_keys(BIRTDATE)
-    driver.find_element(By.XPATH,'/html/body/main/section/div/div/section/section'
-                                 '/section/form/section/div[10]/div[1]/span/label/input').click()
+    driver.find_element(By.XPATH,'/html/body/main/section/div/div/section/section/section/form/section/div[8]/div[1]/span/label/input').click()
     custom_sleep()
-    driver.find_element(By.XPATH,'/html/body/main/section/div/div/section/section/section'
-                                 '/form/section/div[8]/div[1]/span/label/input').click()
+    driver.find_element(By.XPATH,'/html/body/main/section/div/div/section/section/section/form/section/div[9]/div[1]/span/label/input').click()
     custom_sleep()
 
     driver.find_element(By.XPATH,'/html/body/main/section/div/div/section/section'
@@ -128,8 +125,7 @@ def fill_cart():
 
 def go_to_cart():
     custom_sleep()
-    driver.find_element(By.XPATH, '/html/body/main/header/nav/div/div/div[1]/'
-                                  'div[2]/div[3]/div/div/a/span[1]').click()
+    driver.find_element(By.XPATH, '/html/body/main/header/nav/div/div/div[1]/div[2]/div[3]/div/div').click()
     custom_sleep()
 
 def remove_item_from_cart():
@@ -200,6 +196,7 @@ go_to_cart()
 make_order()
 check_status_of_order()
 driver.close()
+time.sleep(300)
 time.sleep(200)
 
 
