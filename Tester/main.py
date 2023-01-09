@@ -26,7 +26,7 @@ def custom_sleep():
         time.sleep(SLEEP_TIME)
 
 def login():
-    driver.find_element(By.XPATH,'/html/body/main/header/nav/div/div/div[1]/div[2]/div[2]/div/a').click()
+    driver.find_element(By.XPATH,'/html/body/main/header/nav/div/div/div[1]/div[2]/div[1]/div/a').click()
     driver.find_element(By.XPATH,
                         '/html/body/main/section/div/div/section/section/section'
                         '/form/section/div[1]/div[1]/input').send_keys(EMAIL)
@@ -40,7 +40,7 @@ def login():
 def register():
 
     #going to register from
-    driver.find_element(By.XPATH, '/html/body/main/header/nav/div/div/div[1]/div[2]/div[2]/div/a').click()
+    driver.find_element(By.XPATH, '/html/body/main/header/nav/div/div/div[1]/div[2]/div[1]/div/a').click()
     time.sleep(1)
     driver.find_element(By.XPATH, '/html/body/main/section/div/div/section/section/div/a').click()
     time.sleep(1)
@@ -125,7 +125,7 @@ def fill_cart():
 
 def go_to_cart():
     custom_sleep()
-    driver.find_element(By.XPATH, '/html/body/main/header/nav/div/div/div[1]/div[2]/div[3]/div/div').click()
+    driver.find_element(By.XPATH, '/html/body/main/header/nav/div/div/div[1]/div[2]/div[2]/div/div/a/span[1]').click()
     custom_sleep()
 
 def remove_item_from_cart():
@@ -176,8 +176,7 @@ def make_order():
 
 def check_status_of_order():
     #account
-    driver.find_element(By.XPATH, '/html/body/main/header/nav/div/div/div[1]/'
-                                  'div[2]/div[2]/div/a[2]/span').click()
+    driver.find_element(By.XPATH, '/html/body/main/header/nav/div/div/div[1]/div[2]/div[1]/div/a[2]/span').click()
     custom_sleep()
     #orders history
     driver.find_element(By.XPATH, '/html/body/main/section/div/div/section'
