@@ -1,21 +1,23 @@
 version: '3.9'
 
-
-
-
 services:
-     mariadb:
-        image: mariadb
+    mariadb:
+        image: mariadb:10.8.2
         container_name: be_181841_db
-        restart: always
         networks:
             - be_181841
         environment:
-            MYSQL_ROOT_PASSWORD: prestashop
-            
- 
-     prestashop:
-        image: dawidrezmer/be_18184
+            MYSQL_ROOT_PASSWORD: student
+        deploy:
+             restart_policy:
+                 condition: on-failure
+                 delay: 3s
+                 max_attempts: 5
+        volumes:
+            - ./db:/docker-entrypoint-initdb.d
+     
+    prestashop:
+        image: pdurkalec/be_181841
         container_name: be_181841_shop
         environment:
             DB_SERVER: mariadb
@@ -24,14 +26,19 @@ services:
             PS_INSTALL_AUTO: 0
             PS_ERASE_DB: 0
             DB_USER: be_181841
-            DB_PASSWD: prestashop
+            DB_PASSWD: student
             DB_NAME: be_181841
             PS_DEV_MODE: 0
         ports:
             - 18184:443
         networks:
             - be_181841
+        deploy:
+             restart_policy:
+                 condition: on-failure
+                 delay: 3s
+                 max_attempts: 5
                     
+
 networks:
     be_181841:
-    

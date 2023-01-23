@@ -1,13 +1,3 @@
-FROM prestashop/prestashop:1.7.7.8
+FROM mariadb:10.8.2
 
-
-COPY ssl/ /etc/apache2/sites-available
-COPY webshop/ ./
-
-RUN chown -R www-data:root ./
-
-RUN a2enmod ssl
-RUN service apache2 restart
-
-EXPOSE 443
-
+ADD db/be_181841_dump.sql /docker-entrypoint-initdb.d
